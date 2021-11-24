@@ -1,0 +1,17 @@
+<svg id="silueta-variante-de-microchip" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <g id="Grupo_491" data-name="Grupo 491">
+    <path id="Trazado_555" data-name="Trazado 555" d="M70.6,38.97H41.23a2.266,2.266,0,0,0-2.259,2.259V70.6a2.266,2.266,0,0,0,2.259,2.259H70.6A2.266,2.266,0,0,0,72.86,70.6V41.23A2.267,2.267,0,0,0,70.6,38.97Z" transform="translate(-23.416 -23.415)" fill="#546a8f"/>
+    <path id="Trazado_556" data-name="Trazado 556" d="M139.044,65.306H149a1.867,1.867,0,0,0,0-3.733h-9.955a1.867,1.867,0,1,0,0,3.733Z" transform="translate(-85.865 -38.304)" fill="#546a8f"/>
+    <path id="Trazado_557" data-name="Trazado 557" d="M149,81.059h-9.955a1.867,1.867,0,1,0,0,3.733H149a1.867,1.867,0,0,0,0-3.733Z" transform="translate(-85.865 -50.426)" fill="#546a8f"/>
+    <path id="Trazado_558" data-name="Trazado 558" d="M149,100.544h-9.955a1.867,1.867,0,1,0,0,3.733H149a1.867,1.867,0,0,0,0-3.733Z" transform="translate(-85.865 -62.547)" fill="#546a8f"/>
+    <path id="Trazado_559" data-name="Trazado 559" d="M11.822,61.573H1.867a1.867,1.867,0,1,0,0,3.733h9.955a1.867,1.867,0,0,0,0-3.733Z" transform="translate(0 -38.304)" fill="#546a8f"/>
+    <path id="Trazado_560" data-name="Trazado 560" d="M11.822,81.059H1.867a1.866,1.866,0,1,0,0,3.733h9.955a1.866,1.866,0,0,0,0-3.733Z" transform="translate(0 -50.426)" fill="#546a8f"/>
+    <path id="Trazado_561" data-name="Trazado 561" d="M11.823,100.544H1.867a1.867,1.867,0,0,0,0,3.733h9.955a1.867,1.867,0,0,0,0-3.733Z" transform="translate(-0.001 -62.547)" fill="#546a8f"/>
+    <path id="Trazado_562" data-name="Trazado 562" d="M63.44,13.688a1.867,1.867,0,0,0,1.866-1.867V1.866a1.867,1.867,0,0,0-3.733,0v9.955A1.868,1.868,0,0,0,63.44,13.688Z" transform="translate(-38.304)" fill="#546a8f"/>
+    <path id="Trazado_563" data-name="Trazado 563" d="M82.925,13.688a1.867,1.867,0,0,0,1.867-1.867V1.866a1.867,1.867,0,0,0-3.733,0v9.955A1.867,1.867,0,0,0,82.925,13.688Z" transform="translate(-50.426)" fill="#546a8f"/>
+    <path id="Trazado_564" data-name="Trazado 564" d="M102.411,13.688a1.867,1.867,0,0,0,1.867-1.867V1.866a1.867,1.867,0,0,0-3.733,0v9.955A1.867,1.867,0,0,0,102.411,13.688Z" transform="translate(-62.548)" fill="#546a8f"/>
+    <path id="Trazado_565" data-name="Trazado 565" d="M63.44,137.176a1.867,1.867,0,0,0-1.867,1.867V149a1.867,1.867,0,1,0,3.733,0v-9.955A1.867,1.867,0,0,0,63.44,137.176Z" transform="translate(-38.304 -85.865)" fill="#546a8f"/>
+    <path id="Trazado_566" data-name="Trazado 566" d="M82.925,137.176a1.867,1.867,0,0,0-1.866,1.867V149a1.867,1.867,0,1,0,3.733,0v-9.955A1.867,1.867,0,0,0,82.925,137.176Z" transform="translate(-50.426 -85.865)" fill="#546a8f"/>
+    <path id="Trazado_567" data-name="Trazado 567" d="M102.411,137.176a1.867,1.867,0,0,0-1.866,1.867V149a1.867,1.867,0,1,0,3.733,0v-9.955A1.868,1.868,0,0,0,102.411,137.176Z" transform="translate(-62.548 -85.865)" fill="#546a8f"/>
+  </g>
+</svg>
