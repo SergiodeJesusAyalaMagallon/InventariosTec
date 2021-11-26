@@ -25,7 +25,7 @@ class CardArticulo extends StatelessWidget {
       onPressed: onPress,
       child: Container(
         width: 160,
-        height: 180,
+        height: 220,
         decoration: BoxDecoration(
           color: kSecondaryBlack2E2,
           borderRadius: BorderRadius.circular(15),
@@ -33,7 +33,8 @@ class CardArticulo extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: 170,
+              width: 160,
+              height: 160,
               decoration: BoxDecoration(
                 color: kSecondaryBlack4A4,
                 borderRadius: BorderRadius.circular(15),
@@ -45,7 +46,7 @@ class CardArticulo extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              margin: EdgeInsets.only(left: 15, top: 15),
+              margin: EdgeInsets.only(left: 15, top: 10),
               child: Text(titulo,
                   style: TextStyle(
                       fontSize: 14,
@@ -55,7 +56,7 @@ class CardArticulo extends StatelessWidget {
             ),
             Container(
                 alignment: Alignment.centerLeft,
-                margin: EdgeInsets.only(left: 15, top: 5, bottom: 20),
+                margin: EdgeInsets.only(left: 15, top: 5, bottom: 10),
                 child: extra),
           ],
         ),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:inventarios/Screen_Users/Client/InicioAlumnos/inicio_alumnos_screen.dart';
 import 'package:inventarios/components/boton_return.dart';
-import 'package:inventarios/components/pin_code.dart';
+import 'package:inventarios/Screens/ConfirmacionCorreo/components/pin_code.dart';
 import 'package:inventarios/components/rounded_button.dart';
 
 import '../../../constants.dart';

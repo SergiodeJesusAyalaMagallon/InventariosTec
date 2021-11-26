@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:inventarios/Screens/Registro/registro_screen.dart';
-import 'package:inventarios/components/card_information.dart';
+import 'package:inventarios/Screens/ConfirmacionUsuario/components/card_information.dart';
 import 'package:inventarios/components/rounded_button.dart';
 
 import '../../../constants.dart';

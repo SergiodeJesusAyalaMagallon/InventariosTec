@@ -1,7 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+
+import 'package:inventarios/Screen_Users/Admin/Articulo/components/confirmar_eliminacion.dart';
+import 'package:inventarios/Screen_Users/Admin/Editar/editar.dart';
+import 'package:inventarios/components/articulo_contenido.dart';
 import 'package:inventarios/components/boton_return.dart';
+import 'package:inventarios/components/hero_dialog_route.dart';
 import 'package:inventarios/components/rounded_button_icon.dart';
 import 'package:inventarios/components/tarjeta_variante.dart';
 
@@ -10,7 +15,9 @@ import '../../../../constants.dart';
 class Body extends StatelessWidget {
   const Body({
     Key? key,
+    required this.client,
   }) : super(key: key);
+  final bool client;
 
   @override
   Widget build(BuildContext context) {
@@ -19,59 +26,31 @@ class Body extends StatelessWidget {
       children: [
         Column(
           children: [
+            ArticuloContenido(),
             Container(
-              width: size.width,
-              height: size.height * .39,
-              decoration: BoxDecoration(
-                color: kSecondaryBlack252,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(35),
-                    bottomRight: Radius.circular(35)),
-              ),
-              child: Image.asset(
-                "assets/images/arduinouno.png",
-                scale: .1,
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 15),
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Row(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text("Placa Arduino",
-                          style: TextStyle(
-                              fontWeight: kbold,
-                              fontSize: 20,
-                              fontFamily: 'Montserrat',
-                              color: kSecondaryLightE0E)),
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 10),
-                    child: Text(
-                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontFamily: 'Roboto',
-                            color: kSecondaryLightE0E)),
-                  ),
                   TarjetaVariante(
                     active: true,
                     variable: "Arduino UNO R3",
+                    admin: true,
+                    numero: "13",
                   ),
                   TarjetaVariante(
                     active: false,
                     ruta: "assets/images/arduinomega.png",
                     variable: "Arduino MEGA",
+                    admin: true,
+                    numero: "4",
                   ),
                   TarjetaVariante(
                     active: false,
                     ruta: "assets/images/Arduinonano.png",
                     variable: "Arduino NANO",
+                    admin: true,
+                    numero: "7",
                   ),
                 ],
               ),
@@ -79,87 +58,54 @@ class Body extends StatelessWidget {
           ],
         ),
         Positioned(top: 50, left: 15, child: BotonReturn()),
-        Positioned(
-          bottom: 0,
-          child: Container(
-              width: size.width,
-              height: size.height * .1,
-              decoration: BoxDecoration(
-                color: kSecondaryBlack252,
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 50),
-                    width: 25,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: kSecondaryBlack4A4,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(5),
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(5)),
-                    ),
-                    child: Text("-",
-                        style: TextStyle(
-                            fontWeight: kbold,
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            color: kWhiteColor)),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 5),
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: kSecondaryBlack4A4,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Text("1",
-                        style: TextStyle(
-                            fontWeight: kbold,
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            color: kWhiteColor)),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 5),
-                    width: 25,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: kSecondaryBlack4A4,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(5),
-                          bottomRight: Radius.circular(10),
-                          topLeft: Radius.circular(5),
-                          topRight: Radius.circular(10)),
-                    ),
-                    child: Text("+",
-                        style: TextStyle(
-                            fontWeight: kbold,
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            color: kWhiteColor)),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 60),
-                    child: RoundedButonIcon(
-                        text: "Añadir",
-                        press: () {},
-                        textcolor: kPrimaryColor1B3,
-                        color: kPrimaryLight8D9,
-                        iconcolor: kPrimaryColor1B3,
-                        icon: Icons.add_circle_rounded,
-                        tamano: .42,
-                        radius: 15),
-                  )
-                ],
-              )),
-        ),
+        client == false
+            ? Positioned(
+                bottom: 10,
+                child: SizedBox(
+                    width: size.width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Hero(
+                          tag: "eliminar-articulo-hero",
+                          child: RoundedButonIcon(
+                            text: "Borrar",
+                            press: () {
+                              Navigator.of(context).push(HeroDialogRoute(
+                                builder: (context) {
+                                  return const EliminacionPop();
+                                },
+                              ));
+                            },
+                            textcolor: kWhiteColor,
+                            color: kSecondaryBlack4A4,
+                            iconcolor: kWhiteColor,
+                            icon: Icons.delete_rounded,
+                            tamano: .45,
+                            radius: 15,
+                            padding: 3,
+                          ),
+                        ),
+                        RoundedButonIcon(
+                          text: "Editar",
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return EditarScreen();
+                            }));
+                          },
+                          textcolor: kPrimaryColor1B3,
+                          color: kPrimaryLight8D9,
+                          iconcolor: kPrimaryColor1B3,
+                          icon: Icons.edit_rounded,
+                          tamano: .45,
+                          radius: 15,
+                          padding: 3,
+                        )
+                      ],
+                    )),
+              )
+            : Positioned(child: Column())
       ],
     );
   }

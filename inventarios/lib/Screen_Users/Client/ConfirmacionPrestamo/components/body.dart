@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:inventarios/components/boton_return.dart';
 import 'package:inventarios/components/extra.dart';
-import 'package:inventarios/components/material_container_final.dart';
+import 'package:inventarios/Screen_Users/Client/ConfirmacionPrestamo/components/material_container_final.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../../../constants.dart';

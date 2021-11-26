@@ -38,6 +38,9 @@ dependencies:
   pin_code_fields: ^7.3.0
   transparent_image: ^2.0.0
   qr_flutter: ^4.0.0
+  flutter_calendar_carousel: ^2.1.0
+  table_calendar: ^3.0.3
+  qr_code_scanner: ^0.6.1
   flutter_speed_dial:
 
 dev_dependencies:

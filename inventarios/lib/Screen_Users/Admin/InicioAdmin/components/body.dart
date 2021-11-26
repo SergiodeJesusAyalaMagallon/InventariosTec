@@ -1,15 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:inventarios/Screen_Users/Admin/BorradorScreen/borrador_screen.dart';
-import 'package:inventarios/Screen_Users/Admin/CardBigScreen/card_big_screen.dart';
-import 'package:inventarios/Screens/Ajustes/ajustes_screen.dart';
+import 'package:inventarios/Screen_Users/Admin/Ajustes/ajustes_screen.dart';
+import 'package:inventarios/Screen_Users/Admin/DetallePrestamo/detalle_prestamo.dart';
+import 'package:inventarios/Screen_Users/Admin/Inventario/inventario.dart';
+import 'package:inventarios/Screens/BorradorScreen/borrador_screen.dart';
+import 'package:inventarios/Screens/CardBigScreen/card_big_screen.dart';
 import 'package:inventarios/Screens/NotifiScreen/notifi_screen.dart';
 import 'package:inventarios/components/borradores_container.dart';
+import 'package:inventarios/components/boton_flotante.dart';
 import 'package:inventarios/components/button_notifi.dart';
 import 'package:inventarios/components/card_information_qr.dart';
 import 'package:inventarios/components/card_presentacion.dart';
-import 'package:inventarios/components/floating_button.dart';
 import 'package:inventarios/components/prestamos_container.dart';
 
 import '../../../../constants.dart';
@@ -137,6 +139,12 @@ class Body extends StatelessWidget {
                             height: size.height * 0.04,
                           ),
                           CardPresentacion(
+                              onpress: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return InventarioScreen();
+                                }));
+                              },
                               titulo: "Controla inventarios",
                               contexto:
                                   "Lleva la gestión completa de los inventarios y materiales de laboratorio",
@@ -174,7 +182,9 @@ class Body extends StatelessWidget {
                             onpress: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return BorradorScreen();
+                                return BorradorScreen(
+                                  adm: true,
+                                );
                               }));
                             },
                           ),
@@ -194,6 +204,12 @@ class Body extends StatelessWidget {
                             height: size.height * 0.02,
                           ),
                           PrestamosContainer(
+                            onpress: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return DetallePrestamoScreen();
+                              }));
+                            },
                             tituloprestamo: 'Prestamos de redes',
                             codigoprestamo: 'ITJ-RD210829',
                             dia: '09',
@@ -203,6 +219,12 @@ class Body extends StatelessWidget {
                             retrasado: true,
                           ),
                           PrestamosContainer(
+                            onpress: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return DetallePrestamoScreen();
+                              }));
+                            },
                             tituloprestamo:
                                 'Material para practica de laboratorio',
                             codigoprestamo: 'ITJ-EL210852',
@@ -213,6 +235,12 @@ class Body extends StatelessWidget {
                             retrasado: false,
                           ),
                           PrestamosContainer(
+                            onpress: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return DetallePrestamoScreen();
+                              }));
+                            },
                             tituloprestamo: 'Teclado y mouse',
                             codigoprestamo: 'ITJ-WB210852',
                             dia: '11',
@@ -250,6 +278,7 @@ class Body extends StatelessWidget {
                             height: size.height * 0.05,
                           ),
                           CardPresentacion(
+                              onpress: () {},
                               titulo: "Toma el control",
                               contexto:
                                   "Desde aquí se pueden gestionar los usuarios y sus permisos dentro de la aplicación",
@@ -268,7 +297,7 @@ class Body extends StatelessWidget {
             ),
           ],
         ),
-        Positioned(bottom: 10, right: 10, child: FloatButton())
+        Positioned(bottom: 5, right: 10, child: BotonFlotante())
       ],
     );
   }

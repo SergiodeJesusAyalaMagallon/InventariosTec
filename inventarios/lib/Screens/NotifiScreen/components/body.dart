@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:inventarios/components/boton_return.dart';
-import 'package:inventarios/components/notifi_container.dart';
+import 'package:inventarios/Screens/NotifiScreen/components/notifi_container.dart';
 
 import '../../../../constants.dart';
 

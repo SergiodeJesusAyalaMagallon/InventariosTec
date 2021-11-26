@@ -15,6 +15,7 @@ class CardPresentacion extends StatelessWidget {
     required this.textoboton,
     required this.icono,
     required this.ruta,
+    required this.onpress,
   }) : super(key: key);
 
   final String titulo;
@@ -22,7 +23,7 @@ class CardPresentacion extends StatelessWidget {
   final String textoboton;
   final IconData icono;
   final String ruta;
-
+  final VoidCallback onpress;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -70,7 +71,7 @@ class CardPresentacion extends StatelessWidget {
               RoundedButonIcon(
                   color: kPrimaryLight8D9,
                   icon: icono,
-                  press: () {},
+                  press: onpress,
                   text: textoboton,
                   textcolor: kPrimaryColor1B3,
                   iconcolor: kPrimaryColor1B3,
